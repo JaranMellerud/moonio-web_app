@@ -12,7 +12,7 @@ import NonAuthRoute from "./util/NonAuthRoute";
 import AuthProvider from "./util/AuthProvider";
 // Pages
 import Portfolio from "./pages/Portfolio";
-import Transactions from "./pages/Transactions";
+import Transactions from "./pages/transactions";
 import AddTransaction from "./pages/addTransaction";
 import EditTransaction from "./pages/EditTransaction";
 import Settings from "./pages/settings";
@@ -20,6 +20,7 @@ import SignIn from "./pages/signIn";
 import Home from "./pages/Home";
 import Welcome from "./pages/welcome";
 import ForgotPassword from "./pages/forgotPassword";
+import ImportTransactions from "./pages/importTransactions";
 // Components
 import { MarginWrapper } from "./components/containers";
 import NavBar from "./components/navbar";
@@ -63,6 +64,11 @@ function App() {
                 exact
                 path="/add_transaction"
                 component={AddTransaction}
+              />
+              <AuthRoute
+                exact
+                path="/import_transactions"
+                component={ImportTransactions}
               />
               <AuthRoute
                 exact
