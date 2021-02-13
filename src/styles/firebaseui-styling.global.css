@@ -1,0 +1,43 @@
+.firebaseui-idp-button,
+.mdl-button,
+.mdl-js-button,
+.mdl-button--raised,
+.firebaseui-idp-google,
+.firebaseui-id-idp-button {
+  max-width: unset !important;
+  min-width: unset !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: left !important;
+  margin-bottom: 3vmin !important;
+}
+
+.firebaseui-container {
+  max-width: 100% !important;
+}
+
+.firebaseui-idp-text,
+.firebaseui-idp-text-long,
+.firebaseui-idp-text-short {
+  font-size: 2.5vmin !important;
+  font-family: var(--sec-font);
+  margin-left: 1vmin !important;
+}
+
+@media screen and (min-width: 1240px) {
+  .firebaseui-idp-icon {
+    height: 5vmin !important;
+    width: 7vmin !important;
+    margin-left: 3vmin;
+  }
+}
+
+.firebaseui-idp-icon {
+  height: 5vmin !important;
+  width: 7vmin !important;
+}
+
+.firebaseui-tos,
+.firebaseui-tospp-full-message {
+  font-size: 1.5vmin !important;
+}
