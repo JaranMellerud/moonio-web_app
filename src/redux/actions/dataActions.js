@@ -206,3 +206,10 @@ export const destroyChart = (chartInstance, loadingComponent) => (dispatch) => {
   chartInstance.destroy();
   dispatch({ type: CLEAR_ERRORS });
 };
+
+export const getBinancePortfolio = () => {
+  axios
+    .get("/api/binance_portfolio")
+    .then((res) => console.log("bæææææ"))
+    .catch((err) => console.error(err));
+};

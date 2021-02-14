@@ -4,7 +4,8 @@ import Autocomplete from "@material-ui/lab/Autocomplete";
 import { createFilterOptions } from "@material-ui/lab/Autocomplete";
 import { connect } from "react-redux";
 import { fiats } from "../../util/fiats";
-import { StyledTextField, CoinImage } from "./AddTransactionFormComponents";
+import { StyledTextField } from "./AddTransactionFormComponents";
+import { AutocompleteCoinImage } from "../imageComponents";
 
 const AutoCompleteComponent = (props) => {
   const { transaction, inOrOut, coins, id, type, onChange } = props;
@@ -43,7 +44,7 @@ const AutoCompleteComponent = (props) => {
           type === "crypto" ? (
             <React.Fragment>
               <span>
-                <CoinImage alt={option.name} src={option.image} />
+                <AutocompleteCoinImage alt={option.name} src={option.image} />
                 &nbsp;&nbsp;
               </span>
               {`${option.name} (${option.symbol.toUpperCase()})`}

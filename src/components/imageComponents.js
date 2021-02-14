@@ -10,6 +10,14 @@ export const CoinImage = styled.img`
   margin-right: 20px;
 `;
 
+export const AutocompleteCoinImage = styled.img`
+  && {
+    height: 25px;
+    width: auto;
+    margin-right: 20px;
+  }
+`;
+
 const NavBarLogoImage = styled.img`
   height: 90px;
   width: auto;

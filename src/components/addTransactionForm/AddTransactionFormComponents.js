@@ -2,19 +2,11 @@
 import styled from "styled-components";
 // Material UI
 import TextField from "@material-ui/core/TextField";
-import Checkbox from "@material-ui/core/Checkbox";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 // Material UI Icons
 import ArrowForwardOutlinedIcon from "@material-ui/icons/ArrowForwardOutlined";
 // Components
 import { AddTransactionButton } from "../buttons";
-
-export const FormFieldHeader = styled.h2`
-  && {
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-`;
 
 export const StyledAutocomplete = styled(Autocomplete)`
   && {
@@ -49,12 +41,6 @@ export const FiatInOutContainer = styled.div`
   }
 `;
 
-export const StyledCheckbox = styled(Checkbox)`
-  && {
-    background-color: white;
-  }
-`;
-
 export const AssetTypeOutContainer = styled.div`
   && {
     width: 50%;
@@ -73,13 +59,6 @@ export const AssetContainer = styled.div`
   && {
     width: 45%;
     text-align: center;
-  }
-`;
-
-export const CoinImage = styled.img`
-  && {
-    height: 25px;
-    width: auto;
   }
 `;
 

@@ -17,8 +17,10 @@ export const PageHeader = (props) => {
 };
 
 const StyledSmallHeader = styled(Typography)`
-  margin-bottom: 10px;
-  font-weight: bold;
+  && {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
 `;
 
 export const SmallHeader = (props) => {

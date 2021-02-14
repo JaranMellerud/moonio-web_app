@@ -20,11 +20,9 @@ import { AutoCompleteSkeleton } from "../loadingComponents";
 import AutoCompleteComponent from "./AutoCompleteComponent";
 import { ErrorText } from "../textComponents";
 import {
-  FormFieldHeader,
   StyledTextField,
   AssetTypeInOutContainer,
   FiatInOutContainer,
-  StyledCheckbox,
   AssetTypeOutContainer,
   AddTransactionFormDivider,
   AssetContainer,
@@ -34,6 +32,7 @@ import {
   FeesTypeContainer,
   StyledAddTransactionButton,
 } from "./AddTransactionFormComponents";
+import { FormFieldHeader, StyledCheckbox } from "../formComponents";
 
 const assetTypes = {
   crypto: "crypto",
@@ -219,7 +218,7 @@ const AddTransactionForm = (props) => {
     <Grid container>
       <Grid item sm />
       <Grid item sm={6}>
-        <form noValidate onSubmit={handleSubmit}>
+        <form noValidate>
           <FormFieldHeader>Transaction Date</FormFieldHeader>
           <StyledTextField
             onChange={handleDateChange}

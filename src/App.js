@@ -72,6 +72,11 @@ function App() {
               />
               <AuthRoute
                 exact
+                path="/import_transactions/:wallet"
+                component={ImportTransactions}
+              />
+              <AuthRoute
+                exact
                 path="/edit_transaction/:id"
                 component={EditTransaction}
               />
