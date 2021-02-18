@@ -81,7 +81,7 @@ export const addTransaction = (loadingComponent, transaction, history) => (
 ) => {
   dispatch({ type: LOADING_UI, payload: loadingComponent });
   axios
-    .post(`/api/addTransaction`, transaction)
+    .post("/api/addTransaction, transaction")
     .then(() => {
       dispatch({ type: SET_USER_HAS_TRANSACTIONS, payload: true });
       dispatch({ type: CLEAR_ERRORS });
@@ -205,11 +205,4 @@ export const destroyChart = (chartInstance, loadingComponent) => (dispatch) => {
   dispatch({ type: LOADING_UI, payload: loadingComponent });
   chartInstance.destroy();
   dispatch({ type: CLEAR_ERRORS });
-};
-
-export const getBinancePortfolio = () => {
-  axios
-    .get("/api/binance_portfolio")
-    .then((res) => console.log("bæææææ"))
-    .catch((err) => console.error(err));
 };

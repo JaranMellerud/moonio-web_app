@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
@@ -10,10 +10,21 @@ import wallets from "../../util/wallets";
 import AddSpecificWallet from "../addSpecificWallet";
 
 const AddNewWallet = (props) => {
+  const { loadingComponent } = props;
   const history = useHistory();
   const { wallet } = useParams();
-  const { loadingComponent } = props;
   const [activeWallet, setActiveWallet] = useState(wallet ? wallet : "");
+  const [walletToRender, setWalletToRender] = useState("");
+
+  useEffect(() => {
+    if (activeWallet) {
+      setWalletToRender(
+        wallets.find((wallet) => {
+          return wallet.id === activeWallet;
+        })
+      );
+    }
+  }, [activeWallet]);
 
   const handleWalletChange = (event, value) => {
     if (!value) {
@@ -36,7 +47,7 @@ const AddNewWallet = (props) => {
             activeWallet={activeWallet}
           />
         )}
-        <AddSpecificWallet activeWallet={activeWallet} />
+        <AddSpecificWallet walletToRender={walletToRender} />
       </WalletContainer>
     </>
   );

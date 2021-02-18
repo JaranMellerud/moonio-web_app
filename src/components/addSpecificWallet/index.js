@@ -1,19 +1,24 @@
 import React, { createElement } from "react";
-import addSpecificWalletWallets from "./addSpecificWalletWallets";
+import addSpecificWalletWallets from "./howToAddComponents";
 
 const AddSpecificWallet = (props) => {
-  const { activeWallet } = props;
+  const { walletToRender } = props;
 
   const specificWalletToRender = addSpecificWalletWallets.find(
     (specificWallet) => {
-      return specificWallet.id === activeWallet;
+      return specificWallet.id === walletToRender.id;
     }
   );
 
   return (
     <>
-      {activeWallet ? (
-        <>{createElement(specificWalletToRender.component)}</>
+      {specificWalletToRender ? (
+        <>
+          {createElement(specificWalletToRender.component, {
+            id: specificWalletToRender.id,
+            name: specificWalletToRender.name,
+          })}
+        </>
       ) : (
         <></>
       )}

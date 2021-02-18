@@ -18,7 +18,7 @@ const Kraken = () => {
         and log in
       </HowToText>
       <HowToText>
-        2. Navigate to <b>Settings</b> &gt; <b>API</b>
+        2. Navigate to <b>Security</b> &gt; <b>API</b>
       </HowToText>
       <HowToText>
         3. Click the <b>Generate New Key</b> button
