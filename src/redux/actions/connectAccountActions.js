@@ -45,3 +45,15 @@ export const connectAccountWithApiKey = (
       }
     });
 };
+
+export const connectWalletWithHdAddress = (coin, hdAddress, walletId) => (
+  dispatch
+) => {
+  console.log(coin, hdAddress, walletId);
+};
+
+export const connectWalletWithPublicAddress = (
+  coin,
+  publicAddress,
+  walletId
+) => (dispatch) => {};

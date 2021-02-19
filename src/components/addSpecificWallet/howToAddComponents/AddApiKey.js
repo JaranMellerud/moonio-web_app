@@ -10,16 +10,9 @@ import {
 } from "../addSpecificWalletComponents";
 import { connectAccountWithApiKey } from "../../../redux/actions/connectAccountActions";
 import { ErrorText } from "../../textComponents";
-import CircularProgress from "@material-ui/core/CircularProgress";
 
 const AddApiKey = (props) => {
-  const {
-    id,
-    name,
-    connectAccountWithApiKey,
-    errors,
-    loadingComponent,
-  } = props;
+  const { id, name, connectAccountWithApiKey, errors } = props;
   const history = useHistory();
   const [apiKey, setApiKey] = useState("");
   const [apiSecret, setApiSecret] = useState("");
@@ -57,13 +50,8 @@ const AddApiKey = (props) => {
               history
             );
           }}
-          disabled={loadingComponent === "addExchangeButton"}
         >
-          {loadingComponent !== "addExchangeButton" ? (
-            <span>Add Exchange</span>
-          ) : (
-            <CircularProgress />
-          )}
+          <span>Add Exchange</span>
         </StyledAddTransactionButton>
       </StyledForm>
     </>

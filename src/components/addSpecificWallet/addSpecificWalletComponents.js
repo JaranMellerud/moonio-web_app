@@ -13,6 +13,7 @@ const StyledTypography = styled(Typography)`
   && {
     color: ${palette.primary.darkGray};
     font-size: 0.9rem;
+    margin-bottom: 20px;
   }
 `;
 
